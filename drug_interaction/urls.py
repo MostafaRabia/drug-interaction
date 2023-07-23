@@ -30,5 +30,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
     path('check-drug-disease-interaction', interaction_views.check_if_drug_interaction_disease),
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path("__debug__/", include("debug_toolbar.urls")),
 ]
